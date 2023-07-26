@@ -87,6 +87,14 @@ final public class EmojiView: UIView {
     private var emojis: [EmojiCategory]!
     private var keyboardSettings: KeyboardSettings?
     
+    public override var intrinsicContentSize: CGSize {
+        if let h = keyboardSettings?.height {
+            return .init(width: UIView.noIntrinsicMetric, height: h)
+        }
+        
+        return .init(width: UIView.noIntrinsicMetric, height: UIView.noIntrinsicMetric)
+    }
+    
     // MARK: - Init functions
     
     public override init(frame: CGRect) {

@@ -11,6 +11,8 @@ final public class KeyboardSettings {
     
     // MARK: - Public variables
     
+    public var height: CGFloat?
+    
     /// false if you want update recent emoji every popup.
     public var updateRecentEmojiImmediately:Bool = true
     
