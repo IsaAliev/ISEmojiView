@@ -72,6 +72,11 @@ internal class EmojiCollectionView: UIView {
         return CGSize(width: UIView.noIntrinsicMetric, height: frame.size.height)
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        collectionView.contentInset.bottom = safeAreaInsets.bottom
+    }
     
     // MARK: - Public
     
