@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct EmojiViewConfig {
     public static var categorySelectionIndicatorColor = UIColor(red: 201/255, green: 206/255, blue: 214/255, alpha: 1)
