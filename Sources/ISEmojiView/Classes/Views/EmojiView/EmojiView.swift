@@ -247,7 +247,7 @@ extension EmojiView {
     
     private func setupBottomContainerView() {
         let bottomContainerView = UIView()
-        bottomContainerView.backgroundColor = .clear
+        bottomContainerView.backgroundColor = EmojiViewConfig.categoriesViewBgColor
         bottomContainerView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(bottomContainerView)
         
@@ -345,7 +345,7 @@ extension EmojiView {
         
         addConstraints(
             NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-5-[emojiCollectionView]-(0)-[bottomContainerView(44)]",
+                withVisualFormat: "V:|-0-[bottomContainerView(44)]-(0)-[emojiCollectionView]",
                 options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                 metrics: nil,
                 views: views

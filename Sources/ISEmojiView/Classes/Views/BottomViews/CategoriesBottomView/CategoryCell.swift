@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 private let HighlightedBackgroundViewSize = CGFloat(30)
-private let ImageActiveTintColor = UIColor(red: 95/255, green: 94/255, blue: 95/255, alpha: 1)
-private let ImageNonActiveTintColor = UIColor(red: 161/255, green: 165/255, blue: 172/255, alpha: 1)
 
 internal class CategoryCell: UICollectionViewCell {
     
@@ -18,7 +16,7 @@ internal class CategoryCell: UICollectionViewCell {
     
     private var highlightedBackgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 201/255, green: 206/255, blue: 214/255, alpha: 1)
+        view.backgroundColor = EmojiViewConfig.categorySelectionIndicatorColor
         view.isHidden = true
         return view
     }()
@@ -26,7 +24,7 @@ internal class CategoryCell: UICollectionViewCell {
     private lazy var emojiImageView: UIImageView = {
         let emojiImageView = UIImageView()
         emojiImageView.contentMode = .center
-        emojiImageView.tintColor = ImageNonActiveTintColor
+        emojiImageView.tintColor = EmojiViewConfig.categoryNoSelectionTintColor
         return emojiImageView
     }()
     
@@ -45,14 +43,14 @@ internal class CategoryCell: UICollectionViewCell {
     override var isHighlighted: Bool {
         didSet {
             highlightedBackgroundView.isHidden = !isHighlighted
-            emojiImageView.tintColor = isHighlighted ? ImageActiveTintColor : ImageNonActiveTintColor
+            emojiImageView.tintColor = isHighlighted ? EmojiViewConfig.categorySelectionTintColor : EmojiViewConfig.categoryNoSelectionTintColor
         }
     }
     
     override var isSelected: Bool {
         didSet {
             highlightedBackgroundView.isHidden = !isSelected
-            emojiImageView.tintColor = isSelected ? ImageActiveTintColor : ImageNonActiveTintColor
+            emojiImageView.tintColor = isSelected ? EmojiViewConfig.categorySelectionTintColor : EmojiViewConfig.categoryNoSelectionTintColor
         }
     }
     
