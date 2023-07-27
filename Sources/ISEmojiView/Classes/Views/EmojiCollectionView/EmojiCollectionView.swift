@@ -203,11 +203,11 @@ extension EmojiCollectionView: UICollectionViewDelegateFlowLayout {
         }
         
         if section == 0 {
-            inset.left = 3
+            inset.left = 24
         }
         
         if section == emojis.count - 1 {
-            inset.right = 4
+            inset.right = 24
         }
         
         return inset
