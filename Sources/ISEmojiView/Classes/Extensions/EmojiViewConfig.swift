@@ -13,4 +13,6 @@ public struct EmojiViewConfig {
     public static var categorySelectionTintColor = UIColor(red: 95/255, green: 94/255, blue: 95/255, alpha: 1)
     public static var categoryNoSelectionTintColor = UIColor(red: 161/255, green: 165/255, blue: 172/255, alpha: 1)
     public static var categoriesViewBgColor = UIColor.clear
+    public static var keyboardTopInset = 6
+    public static var keyboardBottomInset = 6
 }
